@@ -97,6 +97,4 @@ Make sure `.gitignore` includes:
 /src/storage
 /public/storage
 
----
 
-✅ This setup ensures everyone in the group has the **exact same development environment** and can work consistently on the project.
