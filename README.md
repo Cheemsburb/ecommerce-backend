@@ -47,9 +47,10 @@ DB_PASSWORD=secret
 
 4. **Generate the application key**
 docker exec -it ecommerce-backend bash
+composer install
 php artisan key:generate
 
-5. **Run migrations and seeders**
+6. **Run migrations and seeders**
 php artisan migrate:fresh --seed
 
 ---
