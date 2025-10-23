@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: ecommerce-backend
     ports:
-      - "8000:80"
+      - "8000:80"   # Host 8000 -> Container 80 (Laravel app)
     volumes:
       - ./src:/var/www/html
     depends_on:
@@ -28,7 +28,7 @@ services:
       MYSQL_PASSWORD: secret
       MYSQL_ROOT_PASSWORD: root
     ports:
-      - "3306:3306"
+      - "3307:3306"  # Host 3307 -> Container 3306 (MySQL)
     volumes:
       - db_data:/var/lib/mysql
 
@@ -37,7 +37,7 @@ services:
     container_name: ecommerce-pma
     restart: always
     ports:
-      - "8080:80"
+      - "8081:80"  # Host 8081 -> Container 80 (PhpMyAdmin)
     environment:
       - PMA_HOST=db
       - PMA_USER=laravel
